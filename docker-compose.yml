@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: ./docker/
+      dockerfile: libreoffice.Dockerfile
+    container_name: libreoffice-tests
+    volumes:
+      - ./docker/data:/data
+    ports:
+      - "2002:2002"
